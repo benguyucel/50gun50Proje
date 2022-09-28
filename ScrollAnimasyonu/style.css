@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+body {
+    background-color: #636e72;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family: 'Mukta', sans-serif;
+    font-weight: bold;
+    color: #ffeaa7;
+    overflow-x: hidden;
+
+
+}
+
+.container {
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content {
+    width: 300px;
+    height: auto;
+    margin-top: 30px;
+    background-color: #6c5ce7;
+    padding: 20px;
+    border-radius: 2% 5%;
+    font-size: 15px;
+    line-height: 25px;
+    transform: translateX(400%);
+    transition: transform .5s ease;
+}
+
+.content:nth-last-of-type(even) {
+    transform: translateX(-400%);
+    transition: transform .5s ease;
+}
+
+.content.show {
+    transform: translateX(0);    transition: transform .5s ease;
+}

@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #2f3542;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: #fafafa;
+    transform-origin: top left;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+    transition: transform 0.5s linear;
+}
+
+.container.show-nav {
+    transform: rotate(-20deg);
+}
+
+.show-nav .open-close {
+    transform: rotate(-70deg);
+}
+
+.open-close-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.open-close-container .open-close {
+    background-color: #ff6b81;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border-radius: 50%;
+}
+
+.open-close-container .open-close button {
+    color: #fff;
+    border: none;
+    background-color: transparent;
+    font-size: 26px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    cursor: pointer;
+}
+
+.open-close-container .open-close button#open {
+    left: 60%;
+}
+
+.open-close-container .open-close button#close {
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.show-nav .open-close {
+    transform: rotate(-90deg);
+
+}
+
+.container .content {
+    max-width: 1000px;
+    margin: 50px auto;
+
+}
+
+.content h2 {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 18px;
+    margin-top: 20px;
+    line-height: 25px;
+}
+
+.content img {
+    width: 100%;
+    border-radius: 5% 2%;
+}
+
+nav {
+    position: fixed;
+    bottom: 30%;
+    transition: translateX linear 400ms;
+
+}
+
+nav ul li {
+    padding-left: 20px;
+    padding-top: 20px;
+    list-style: none;
+    transition: transform linear 400ms;
+    transform: translateX(-100%);
+}
+
+nav ul li a {
+    color: #ff6b81;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+nav ul li+li {
+    margin-left: 15px;
+    transform: translateX(-150%);
+}
+
+nav ul li+li+li {
+    margin-left: 30px;
+    transform: translateX(-200%);
+}
+
+.show-nav+nav li {
+    transform: translateX(0);
+}

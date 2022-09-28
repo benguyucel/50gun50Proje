@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter Tight', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dff9fb;
+}
+
+.container {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .5);
+}
+
+.container h1 {
+    font-size: 24px;
+    color: #eb4d4b;
+    margin-bottom: 30px;
+}
+
+.container .form-control {
+    position: relative;
+    margin: 20px 0 40px;
+}
+
+.container .form-control input {
+    display: block;
+
+    width: 100%;
+    border: 0;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+
+}
+
+.container .form-control input:focus,
+.container .form-control input:valid {
+    outline: 0;
+    font-size: 14px;
+    border-bottom: 2px solid #ddd;
+}
+
+.container .form-control label {
+    font-size: 14px;
+    color: #ddd;
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    left: 0;
+}
+
+.container .form-control label span {
+    display: inline-block;
+    font-size: 15px;
+    min-width: 5px;
+    transition: .3s cubic-bezier(0.7, -0.6, 0.3, 1.55);
+}
+
+
+.container .form-control input:focus+label span,
+.container .form-control input:valid+label span {
+    color: #999;
+    transform: translateY(-30px);
+}
+
+.btn {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 8px;
+    border: none;
+    background-color: #e84118;
+    color: #fff;
+    font-size: 17px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.text {
+    font-size: 13px;
+    color: #7f8fa6;
+}
+
+.text a {
+    text-transform: none;
+    margin-left: 5px;
+    color: #7f8fa6;
+}
+
