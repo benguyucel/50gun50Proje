@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #a55eea;
+    font-family: 'Inter Tight', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.faq-container {
+    margin-top: 60px;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.faq-container .faq-item {
+    background-color: #d1d8e0;
+    border-radius: 10px;
+    position: relative;
+
+
+
+}
+
+.faq-container .faq-item .faq-item-title {
+    font-size: 20px;
+    padding: 20px;
+}
+
+.faq-container .faq-item .faq-item-text {
+    font-size: 16px;
+    font-weight: 500;
+    height: 0;
+    display: none;
+}
+
+.faq-button {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    font-size: 20px;
+}
+
+
+.faq-item.active .faq-item-text {
+    display: block;
+    height: 100%;
+    padding: 0 20px 20px;
+    animation-duration: 1s;
+    animation-name: slideAnimateDown;
+    transition: height 1s;
+
+}
+
+.faq-item.active {
+    border: 2.5px solid #fa8231;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slideAnimateDown {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+
+    to {
+        height: 100%;
+        opacity: 1;
+        /* your line height here */
+    }
+}
